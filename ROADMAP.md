@@ -5,12 +5,12 @@
 - [x] Three characteristics
 - [x] Craving (3) and clinging (4)
 - [x] Rebirth
+- [x] The five aggregates
 - [ ] **Fact-check every lesson against its cited sutta/book**
 - [ ] Check each claim Ṭhānissaro Bhikkhu is credited with
 
 ## Next
 - [ ] Noble Eightfold Path, one lesson per factor
-- [ ] The five aggregates
 - [ ] Dependent co-arising (using the "feeding" approach)
 - [ ] Kamma
 - [ ] Breath meditation: a 5-minute starter (Thai Forest style)

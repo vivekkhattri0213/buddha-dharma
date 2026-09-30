@@ -60,4 +60,4 @@ Just note it. Checking the box is the win.
 ## Go deeper (optional)
 
 - Ṭhānissaro Bhikkhu, [*The Shape of Suffering*](https://www.dhammatalks.org/books/ShapeOfSuffering/): dependent co-arising, including clinging, explained through feeding
-- Previous: [Lesson 3](03-craving.md) · Next: [Lesson 2](02-three-characteristics.md) or [Lesson 5](05-rebirth.md)
+- Previous: [Lesson 3](03-craving.md) · Next: [Lesson 6: Five Aggregates](06-five-aggregates.md)

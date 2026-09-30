@@ -1,0 +1,7 @@
+{
+  "name": "teachings-of-buddha",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "node build.mjs" },
+  "devDependencies": { "marked": "^15.0.0" }
+}
