@@ -6,6 +6,7 @@ Thanks for helping. The goal is **clarity for overwhelmed brains**.
 
 - **Short.** One idea per step. Sentences under ~25 words.
 - **Same layout** as existing lessons (see [template](templates/lesson-template.md)).
+- **Put it in a track folder** under `lessons/` (`1-the-problem`, `2-the-cause`, `3-how-it-works`, `4-big-questions`, or a new numbered one). Name the file `NN-topic.md`, where `NN` is its place in the reading order across *all* tracks. The website's Previous/Next buttons follow that number, so renumber later lessons if you insert one. Add it to the README's track tables and progress list.
 - **Two-minute version first.**
 - **One tiny practice** per lesson, under 5 minutes.
 - **Plain English first**, Pali once in italics.

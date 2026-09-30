@@ -29,3 +29,4 @@ input[type=checkbox]{transform:scale(1.25);margin-right:.5rem;accent-color:var(-
 footer{text-align:center;color:var(--muted);font-size:.8rem;padding:1.5rem 1rem}
 @media (max-width:600px){html{font-size:17px}}
 img{max-width:100%;height:auto;border-radius:10px;margin:.5rem 0}
+.done{margin-top:2.5rem}.done button{font:inherit;font-weight:600;padding:.7rem 1rem;border:2px solid var(--accent);border-radius:8px;background:transparent;color:var(--accent);cursor:pointer}.done button[aria-pressed=true]{background:var(--accent);color:var(--bg)}

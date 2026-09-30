@@ -1,4 +1,4 @@
-# Lesson 5: What Does "Reincarnation" Actually Mean?
+# Lesson 7: What Does "Reincarnation" Actually Mean?
 
 **Time: 10 minutes** · Sources: [MN 38](https://www.dhammatalks.org/suttas/MN/MN38.html), [SN 44.9](https://www.dhammatalks.org/suttas/SN/SN44_9.html) (the fire simile), [MN 117](https://www.dhammatalks.org/suttas/MN/MN117.html)
 
@@ -56,4 +56,4 @@ You can't verify rebirth from a chair. The Buddha invited **testing**: MN 60 (th
 
 - Ṭhānissaro Bhikkhu, [*The Truth of Rebirth*](https://www.dhammatalks.org/books/TruthOfRebirth/)
 - Ṭhānissaro Bhikkhu, [*Karma Q & A*](https://www.dhammatalks.org/books/KarmaQ&A/)
-- Back to the [start](../README.md)
+- Previous: [Lesson 6: Three Characteristics](../3-how-it-works/06-three-characteristics.md) · Back to the [start](../../README.md)

@@ -1,4 +1,4 @@
-# Lesson 6: The Five Aggregates
+# Lesson 4: The Five Aggregates
 
 **Time: 10 minutes** · Sources: [SN 22.79](https://www.dhammatalks.org/suttas/SN/SN22_79.html) (what each aggregate *does*), [SN 22.48](https://www.dhammatalks.org/suttas/SN/SN22_48.html) (aggregates vs. *clung-to* aggregates), [SN 22.59](https://www.dhammatalks.org/suttas/SN/SN22_59.html) (not-self applied to all five)
 
@@ -52,7 +52,7 @@ It's not always in this order, but the point stands: **it's a process, not a per
 In SN 22.48 the Buddha separates the aggregates from the **clinging**-aggregates: the aggregates that have **passion and desire** attached. The aggregates existing isn't the problem. The grabbing is. That's why an awakened person still has the five aggregates but no clinging to them.
 
 ### Step 9: The test for each one
-For each aggregate, ask the Lesson 2 questions:
+For each aggregate, ask the Lesson 6 questions:
 
 - Is it **inconstant**? Yes.
 - Then is it **stressful** to rely on? Yes.
@@ -92,4 +92,4 @@ Short on time? Do just **feeling**: "nice, nasty, or neutral?" once an hour.
 
 - [SN 22.59](https://www.dhammatalks.org/suttas/SN/SN22_59.html): the Buddha's not-self talk that goes through all five
 - Ṭhānissaro Bhikkhu, [*The Shape of Suffering*](https://www.dhammatalks.org/books/ShapeOfSuffering/) and [*Selves & Not-self*](https://www.dhammatalks.org/books/SelvesNot-self/)
-- Previous: [Lesson 2](02-three-characteristics.md) · Next: [Lesson 7: Dependent Origination](07-dependent-origination.md)
+- Previous: [Lesson 3: Clinging](03-clinging.md) · Next: [Lesson 5: Dependent Origination](../3-how-it-works/05-dependent-origination.md)

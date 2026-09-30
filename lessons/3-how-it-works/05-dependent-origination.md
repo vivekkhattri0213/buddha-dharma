@@ -1,4 +1,4 @@
-# Lesson 7: Dependent Origination (Dependent Co-arising)
+# Lesson 5: Dependent Origination (Dependent Co-arising)
 
 **Time: 12 minutes** · Sources: [SN 12.2](https://www.dhammatalks.org/suttas/SN/SN12_2.html) (the twelve links defined), [MN 38](https://www.dhammatalks.org/suttas/MN/MN38.html) (the chain applied to a student's mistaken view), [SN 12.23](https://www.dhammatalks.org/suttas/SN/SN12_23.html) (each link as the "support" for the next)
 
@@ -8,7 +8,7 @@
 
 The answer is a **chain**. Each link **depends on** the one before it.
 
-![Overview: twelve links in three groups. Background machinery (ignorance, fabrications, awareness, name and form, six senses), the trigger loop (contact, feeling, craving, clinging, becoming), and the result (birth, then aging, death and stress).](img/dependent-origination-overview.svg)
+![Overview: twelve links in three groups. Background machinery (ignorance, fabrications, awareness, name and form, six senses), the trigger loop (contact, feeling, craving, clinging, becoming), and the result (birth, then aging, death and stress).](../img/dependent-origination-overview.svg)
 
 The Buddha's short formula: **"When this is, that is. When this isn't, that isn't."**
 
@@ -42,9 +42,9 @@ Skim this part. You can't see it directly.
 | # | Link | Plain English |
 |---|------|---------------|
 | 6 | **Contact** (*phassa*) | A sense meets something: a sound, a thought, a text message |
-| 7 | **Feeling** (*vedanā*) | Pleasant, painful, or neither (see [Lesson 6](06-five-aggregates.md)) |
-| 8 | **Craving** (*taṇhā*) | Thirst: for pleasure, for becoming, for non-becoming (see [Lesson 3](03-craving.md)) |
-| 9 | **Clinging** (*upādāna*) | Grabbing on: to pleasures, views, habits, a sense of self (see [Lesson 4](04-clinging.md)) |
+| 7 | **Feeling** (*vedanā*) | Pleasant, painful, or neither (see [Lesson 4](../2-the-cause/04-five-aggregates.md)) |
+| 8 | **Craving** (*taṇhā*) | Thirst: for pleasure, for becoming, for non-becoming (see [Lesson 2](../2-the-cause/02-craving.md)) |
+| 9 | **Clinging** (*upādāna*) | Grabbing on: to pleasures, views, habits, a sense of self (see [Lesson 3](../2-the-cause/03-clinging.md)) |
 | 10 | **Becoming** (*bhava*) | Taking on an identity in a situation ("I'm the one being wronged") |
 
 ### Step 4: Group C, the result (links 11-12)
@@ -56,7 +56,7 @@ Skim this part. You can't see it directly.
 
 ### Step 5: Watch it happen in one ordinary moment
 
-![A worked example: a message marked seen with no reply. Contact, then an unpleasant feeling, then craving (highlighted as the place to catch it), then clinging to a story, then becoming the rejected person, then stress.](img/dependent-origination-example.svg)
+![A worked example: a message marked seen with no reply. Contact, then an unpleasant feeling, then craving (highlighted as the place to catch it), then clinging to a story, then becoming the rejected person, then stress.](../img/dependent-origination-example.svg)
 
 Read it top to bottom. Notice how **fast** it happens. The whole chain can run in a few seconds.
 
@@ -68,7 +68,7 @@ Two links are *automatic*:
 The *next* link, **craving**, is where you have a choice. The feeling doesn't **force** you to crave. That gap, between feeling and craving, is the practice. It's not easy, but it's real.
 
 ### Step 7: Both directions
-The Buddha also taught the chain **in reverse**: when **ignorance** fades, fabrications fade, and so on down the line, until **stress ends**. That is the *third noble truth* ([Lesson 1](01-four-noble-truths.md)) stated as a sequence.
+The Buddha also taught the chain **in reverse**: when **ignorance** fades, fabrications fade, and so on down the line, until **stress ends**. That is the *third noble truth* ([Lesson 1](../1-the-problem/01-four-noble-truths.md)) stated as a sequence.
 
 ### Step 8: Know this point is debated
 Traditional commentaries read the twelve links as spreading **across three lifetimes**. Ṭhānissaro Bhikkhu emphasizes that the chain also runs **moment to moment, right now**, which is why it's useful for practice. This lesson follows his reading. Scholars and teachers differ, so check the sources.
@@ -107,4 +107,4 @@ Then ask: **"What if I'd stopped at step 3?"** You don't have to succeed. Notici
 
 - Ṭhānissaro Bhikkhu, [*The Shape of Suffering*](https://www.dhammatalks.org/books/ShapeOfSuffering/): the full treatment
 - [SN 12.2](https://www.dhammatalks.org/suttas/SN/SN12_2.html): the Buddha's own definition of each link
-- Previous: [Lesson 6: Five Aggregates](06-five-aggregates.md) · Next: [Lesson 2: Three Characteristics](02-three-characteristics.md)
+- Previous: [Lesson 4: Five Aggregates](../2-the-cause/04-five-aggregates.md) · Next: [Lesson 6: Three Characteristics](06-three-characteristics.md)

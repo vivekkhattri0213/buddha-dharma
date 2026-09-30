@@ -1,4 +1,4 @@
-# Lesson 4: Clinging, the 4 Kinds
+# Lesson 3: Clinging, the 4 Kinds
 
 **Time: 7 minutes** · Source: [DN 15](https://www.dhammatalks.org/suttas/DN/DN15.html) and [MN 11](https://www.dhammatalks.org/suttas/MN/MN11.html) (*upādāna*, "clinging")
 
@@ -17,7 +17,7 @@ Clinging (*upādāna*) is the **grabbing** that follows craving. It's also the w
 
 ## Step by step
 
-### Step 1: Connect it to Lesson 3
+### Step 1: Connect it to Lesson 2
 Craving shows up → you **grab** → that grab is clinging → stress follows. It's a chain, not a separate topic.
 
 ### Step 2: Clinging to sensuality
@@ -30,7 +30,7 @@ Even "good" views. You can cling to a Buddhist view as a badge. Ṭhānissaro Bh
 Treating a precept, ritual, or technique as **automatically** liberating, regardless of understanding. Practice matters; clinging to *the form itself* is the trap.
 
 ### Step 5: Clinging to a doctrine of self
-The big one. It's the belief **"I am this"** (this body, this feeling, this role) and acting from it. Lesson 2's "not-self" reflection targets this.
+The big one. It's the belief **"I am this"** (this body, this feeling, this role) and acting from it. Lesson 6's "not-self" reflection targets this.
 
 ### Step 6: The link to the first truth
 In Lesson 1, Truth 1 summed up stress as **the five aggregates of clinging**. Those five (form, feeling, perception, fabrications, consciousness) become *stressful* when they're **grabbed as "me/mine."** That's why clinging is the heart of the problem.
@@ -60,4 +60,4 @@ Just note it. Checking the box is the win.
 ## Go deeper (optional)
 
 - Ṭhānissaro Bhikkhu, [*The Shape of Suffering*](https://www.dhammatalks.org/books/ShapeOfSuffering/): dependent co-arising, including clinging, explained through feeding
-- Previous: [Lesson 3](03-craving.md) · Next: [Lesson 6: Five Aggregates](06-five-aggregates.md)
+- Previous: [Lesson 2: Craving](02-craving.md) · Next: [Lesson 4: Five Aggregates](04-five-aggregates.md)
