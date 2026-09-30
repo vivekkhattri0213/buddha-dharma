@@ -17,12 +17,13 @@ A beginner-friendly guide to the Buddha's core teachings, built for brains that 
 | 4 | [Clinging: the 4 kinds](lessons/04-clinging.md) | 7 min | What the mind grabs onto and how |
 | 5 | [What does "reincarnation" actually mean?](lessons/05-rebirth.md) | 10 min | Rebirth as something the mind does, not a soul travelling |
 | 6 | [The Five Aggregates](lessons/06-five-aggregates.md) | 10 min | Five activities that make up "you," none of them a self |
+| 7 | [Dependent Origination](lessons/07-dependent-origination.md) | 12 min | The step-by-step chain that turns a moment into stress, and where to break it |
 
 Also: [Glossary](lessons/glossary.md) · [Sources & further reading](SOURCES.md) · [Roadmap](ROADMAP.md) · [Contributing](CONTRIBUTING.md)
 
 ## Suggested path (if you like being told what to do)
 
-`1 → 3 → 4 → 6 → 2 → 5`: truths first, then the cause (craving, clinging), then what gets clung to (the five aggregates), then the three characteristics, then rebirth last, because it makes more sense once the rest is familiar.
+`1 → 3 → 4 → 6 → 7 → 2 → 5`: truths first, then the cause (craving, clinging), then what gets clung to (the five aggregates), then how it all chains together (dependent origination), then the three characteristics, then rebirth last, because it makes more sense once the rest is familiar.
 
 ## Who this is for
 

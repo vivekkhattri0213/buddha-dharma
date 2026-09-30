@@ -28,3 +28,4 @@ input[type=checkbox]{transform:scale(1.25);margin-right:.5rem;accent-color:var(-
 .pager a{padding:.7rem 1rem;border:1px solid var(--line);border-radius:8px;background:var(--card);text-decoration:none;font-weight:600}
 footer{text-align:center;color:var(--muted);font-size:.8rem;padding:1.5rem 1rem}
 @media (max-width:600px){html{font-size:17px}}
+img{max-width:100%;height:auto;border-radius:10px;margin:.5rem 0}

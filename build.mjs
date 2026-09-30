@@ -84,5 +84,9 @@ ${pager}
   writeFileSync(join(OUT, out), html);
 }
 
+// copy images
+mkdirSync(join(OUT, "lessons/img"), { recursive: true });
+for (const f of readdirSync("lessons/img")) copyFileSync(join("lessons/img", f), join(OUT, "lessons/img", f));
+
 writeFileSync(join(OUT, ".nojekyll"), "");
 console.log(`Built ${pages.length} pages into ${OUT}/`);
