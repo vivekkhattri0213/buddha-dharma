@@ -46,4 +46,4 @@ The repo builds into a simple static site in `docs/` (served by GitHub Pages).
 
 ## License
 
-Original text here is [CC BY-SA 4.0](LICENSE.md). Quoted sutta and book material belongs to its authors and translators; see [SOURCES.md](SOURCES.md).
+Lesson text is [CC BY-SA 4.0](LICENSE.md); code is MIT (see [LICENSE](LICENSE)). Quoted sutta and book material belongs to its authors and translators; see [SOURCES.md](SOURCES.md).
