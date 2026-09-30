@@ -16,7 +16,7 @@ Browse all: <https://www.dhammatalks.org/books/>
 
 ## Suttas cited
 
-SN 56.11 · AN 3.136 · SN 22.48 · SN 22.59 · SN 22.79 · SN 44.9 · SN 44.10 · DN 15 · MN 11 · MN 22 · MN 38 · MN 60 · MN 117. Translations are available on dhammatalks.org.
+SN 56.11 · AN 3.136 · SN 22.48 · SN 22.59 · SN 12.2 · SN 12.23 · SN 22.79 · SN 44.9 · SN 44.10 · DN 15 · MN 11 · MN 22 · MN 38 · MN 60 · MN 117. Translations are available on dhammatalks.org.
 
 ## Copyright note
 

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" width="760" role="img" aria-labelledby="t1 d1">
+<title id="t1">The twelve links of dependent co-arising in three groups</title>
+<desc id="d1">Group A, the background machinery: ignorance, fabrications, consciousness, name and form, six senses. Group B, the trigger loop: contact, feeling, craving, clinging, becoming. Group C, the result: birth, then aging, death and stress. Each link leads to the next.</desc>
+<rect width="760" height="520" rx="16" fill="#fffdf9"/>
+<g font-family="system-ui,-apple-system,Segoe UI,sans-serif">
+<text x="380" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="#2a2622">A. The background machinery</text>
+<text x="380" y="54" text-anchor="middle" font-size="13" fill="#6b635a">Always running in the back. Hard to see directly.</text>
+<rect x="46.0" y="70" width="116" height="48" rx="10" fill="#e8eef7" stroke="#6b8cbf" stroke-width="2"/><text x="104.0" y="99.0" text-anchor="middle" font-size="14"  fill="#2a2622">1 Ignorance</text>
+<line x1="164.0" y1="94.0" x2="176.0" y2="94.0" stroke="#6b635a" stroke-width="2.5"/><polygon points="182.0,94.0 174.0,89.0 174.0,99.0" fill="#6b635a"/>
+<rect x="184.0" y="70" width="116" height="48" rx="10" fill="#e8eef7" stroke="#6b8cbf" stroke-width="2"/><text x="242.0" y="99.0" text-anchor="middle" font-size="14"  fill="#2a2622">2 Fabrications</text>
+<line x1="302.0" y1="94.0" x2="314.0" y2="94.0" stroke="#6b635a" stroke-width="2.5"/><polygon points="320.0,94.0 312.0,89.0 312.0,99.0" fill="#6b635a"/>
+<rect x="322.0" y="70" width="116" height="48" rx="10" fill="#e8eef7" stroke="#6b8cbf" stroke-width="2"/><text x="380.0" y="99.0" text-anchor="middle" font-size="14"  fill="#2a2622">3 Awareness</text>
+<line x1="440.0" y1="94.0" x2="452.0" y2="94.0" stroke="#6b635a" stroke-width="2.5"/><polygon points="458.0,94.0 450.0,89.0 450.0,99.0" fill="#6b635a"/>
+<rect x="460.0" y="70" width="116" height="48" rx="10" fill="#e8eef7" stroke="#6b8cbf" stroke-width="2"/><text x="518.0" y="99.0" text-anchor="middle" font-size="14"  fill="#2a2622">4 Name &amp; form</text>
+<line x1="578.0" y1="94.0" x2="590.0" y2="94.0" stroke="#6b635a" stroke-width="2.5"/><polygon points="596.0,94.0 588.0,89.0 588.0,99.0" fill="#6b635a"/>
+<rect x="598.0" y="70" width="116" height="48" rx="10" fill="#e8eef7" stroke="#6b8cbf" stroke-width="2"/><text x="656.0" y="99.0" text-anchor="middle" font-size="14"  fill="#2a2622">5 Six senses</text>
+<line x1="380" y1="124" x2="380" y2="162" stroke="#6b635a" stroke-width="2.5"/><polygon points="380,168 375,160 385,160" fill="#6b635a"/>
+<text x="380" y="192" text-anchor="middle" font-size="16" font-weight="700" fill="#2a2622">B. The trigger loop (this is your daily life)</text>
+<text x="380" y="212" text-anchor="middle" font-size="13" fill="#6b635a">You can watch this part happen. This is where you practice.</text>
+<rect x="46.0" y="228" width="116" height="48" rx="10" fill="#fdf0dc" stroke="#d9902f" stroke-width="2"/><text x="104.0" y="257.0" text-anchor="middle" font-size="14"  fill="#2a2622">6 Contact</text>
+<line x1="164.0" y1="252.0" x2="176.0" y2="252.0" stroke="#6b635a" stroke-width="2.5"/><polygon points="182.0,252.0 174.0,247.0 174.0,257.0" fill="#6b635a"/>
+<rect x="184.0" y="228" width="116" height="48" rx="10" fill="#fdf0dc" stroke="#d9902f" stroke-width="2"/><text x="242.0" y="257.0" text-anchor="middle" font-size="14"  fill="#2a2622">7 Feeling</text>
+<line x1="302.0" y1="252.0" x2="314.0" y2="252.0" stroke="#6b635a" stroke-width="2.5"/><polygon points="320.0,252.0 312.0,247.0 312.0,257.0" fill="#6b635a"/>
+<rect x="322.0" y="228" width="116" height="48" rx="10" fill="#fdf0dc" stroke="#d9902f" stroke-width="2"/><text x="380.0" y="257.0" text-anchor="middle" font-size="14"  fill="#2a2622">8 Craving</text>
+<line x1="440.0" y1="252.0" x2="452.0" y2="252.0" stroke="#6b635a" stroke-width="2.5"/><polygon points="458.0,252.0 450.0,247.0 450.0,257.0" fill="#6b635a"/>
+<rect x="460.0" y="228" width="116" height="48" rx="10" fill="#fdf0dc" stroke="#d9902f" stroke-width="2"/><text x="518.0" y="257.0" text-anchor="middle" font-size="14"  fill="#2a2622">9 Clinging</text>
+<line x1="578.0" y1="252.0" x2="590.0" y2="252.0" stroke="#6b635a" stroke-width="2.5"/><polygon points="596.0,252.0 588.0,247.0 588.0,257.0" fill="#6b635a"/>
+<rect x="598.0" y="228" width="116" height="48" rx="10" fill="#fdf0dc" stroke="#d9902f" stroke-width="2"/><text x="656.0" y="257.0" text-anchor="middle" font-size="14"  fill="#2a2622">10 Becoming</text>
+<rect x="317.0" y="223" width="126" height="58" rx="13" fill="none" stroke="#c2410c" stroke-width="3" stroke-dasharray="6 4"/>
+<text x="380.0" y="302" text-anchor="middle" font-size="13" font-weight="700" fill="#c2410c">the key link to loosen</text>
+<line x1="380" y1="322" x2="380" y2="358" stroke="#6b635a" stroke-width="2.5"/><polygon points="380,364 375,356 385,356" fill="#6b635a"/>
+<text x="380" y="388" text-anchor="middle" font-size="16" font-weight="700" fill="#2a2622">C. The result</text>
+<text x="380" y="408" text-anchor="middle" font-size="13" fill="#6b635a">Taking on a state of being, then the weight that comes with it.</text>
+<rect x="190" y="424" width="170" height="48" rx="10" fill="#fbe4e4" stroke="#c25a5a" stroke-width="2"/><text x="275.0" y="453.0" text-anchor="middle" font-size="14"  fill="#2a2622">11 Birth</text>
+<line x1="362" y1="448" x2="402" y2="448" stroke="#6b635a" stroke-width="2.5"/><polygon points="408,448 400,443 400,453" fill="#6b635a"/>
+<rect x="410" y="424" width="170" height="48" rx="10" fill="#fbe4e4" stroke="#c25a5a" stroke-width="2"/><text x="495.0" y="453.0" text-anchor="middle" font-size="13"  fill="#2a2622">12 Aging, death, stress</text>
+<text x="380" y="502" text-anchor="middle" font-size="13" fill="#6b635a">Each box depends on the one before it: if the cause goes, the result goes.</text>
+</g></svg>

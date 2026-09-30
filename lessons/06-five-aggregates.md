@@ -92,4 +92,4 @@ Short on time? Do just **feeling**: "nice, nasty, or neutral?" once an hour.
 
 - [SN 22.59](https://www.dhammatalks.org/suttas/SN/SN22_59.html): the Buddha's not-self talk that goes through all five
 - Ṭhānissaro Bhikkhu, [*The Shape of Suffering*](https://www.dhammatalks.org/books/ShapeOfSuffering/) and [*Selves & Not-self*](https://www.dhammatalks.org/books/SelvesNot-self/)
-- Previous: [Lesson 2](02-three-characteristics.md) · Next: [Lesson 5: Rebirth](05-rebirth.md)
+- Previous: [Lesson 2](02-three-characteristics.md) · Next: [Lesson 7: Dependent Origination](07-dependent-origination.md)

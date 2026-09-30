@@ -12,6 +12,9 @@ Quick lookups. Skim, don't memorize.
 | *nirodha* | cessation | The ending of stress |
 | *magga* | path | The eightfold path |
 | *khandha* | aggregate | The five heaps: form, feeling, perception, fabrications, consciousness |
+| *paṭicca samuppāda* | dependent origination / co-arising | The chain of steps by which stress is produced, each depending on the last |
+| *phassa* | contact | A sense meeting its object |
+| *avijjā* | ignorance | Not seeing the four noble truths |
 | *bhava* | becoming | Taking on an identity in a world of experience |
 | *kamma* | intentional action | Choices and their results |
 | *sutta* | discourse | A teaching from the early texts |
