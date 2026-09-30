@@ -1,4 +1,4 @@
-# Lesson 2: The Three Characteristics
+# Lesson 6: The Three Characteristics
 
 **Time: 10 minutes** · Sources: [AN 3.136](https://www.dhammatalks.org/suttas/AN/AN3_136.html) and [SN 22.59](https://www.dhammatalks.org/suttas/SN/SN22_59.html) (*Anattalakkhaṇa Sutta*)
 
@@ -59,4 +59,4 @@ After this reflection, the text says the listener becomes **dispassionate**, and
 
 - Ṭhānissaro Bhikkhu, [*Not-self Q & A*](https://www.dhammatalks.org/books/Not-self_Q&A/) (short, practical)
 - Ṭhānissaro Bhikkhu, [*Selves & Not-self*](https://www.dhammatalks.org/books/SelvesNot-self/)
-- Next: [Lesson 5: Rebirth](05-rebirth.md)
+- Previous: [Lesson 5: Dependent Origination](05-dependent-origination.md) · Next: [Lesson 7: Rebirth](../4-big-questions/07-rebirth.md)

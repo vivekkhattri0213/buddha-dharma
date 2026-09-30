@@ -18,7 +18,7 @@ So you never have to figure out the layout:
 - [ ] One lesson per sitting.
 - [ ] Zero guilt for skipping sections. The two-minute version counts.
 - [ ] Do the "Try it now" even badly. Reading alone doesn't stick.
-- [ ] If a word is unfamiliar, check the [glossary](glossary.md) and keep going.
+- [ ] If a word is unfamiliar, check the [glossary](../reference/glossary.md) and keep going.
 - [ ] Don't try to *believe* anything yet. Treat each idea as a hypothesis to test.
 
 ## A note on the Pali words

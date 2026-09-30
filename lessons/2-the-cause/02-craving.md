@@ -1,4 +1,4 @@
-# Lesson 3: Craving, the 3 Kinds
+# Lesson 2: Craving, the 3 Kinds
 
 **Time: 7 minutes** · Source: [SN 56.11](https://www.dhammatalks.org/suttas/SN/SN56_11.html) (craving as the second noble truth)
 
@@ -60,4 +60,4 @@ No judgment. Labeling is the exercise.
 ## Go deeper (optional)
 
 - Ṭhānissaro Bhikkhu, [*Beyond Desire & Passion*](https://www.dhammatalks.org/books/BeyondDesire&Passion/)
-- Previous: [Lesson 1](01-four-noble-truths.md) · Next: [Lesson 4: Clinging](04-clinging.md)
+- Previous: [Lesson 1: Four Noble Truths](../1-the-problem/01-four-noble-truths.md) · Next: [Lesson 3: Clinging](03-clinging.md)

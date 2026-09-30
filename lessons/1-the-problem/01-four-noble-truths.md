@@ -30,7 +30,7 @@ Think of it as a doctor's approach: **diagnosis, cause, cure is possible, treatm
 
 ### Step 3: Truth 2, The cause (*samudaya*)
 - The cause is **craving** (*taṇhā*): for sensual pleasure, for becoming something, for not-becoming.
-- Not "desire" in general. The Buddha doesn't tell you to stop wanting to get out of bed, eat, or meditate. See [Lesson 3](03-craving.md).
+- Not "desire" in general. The Buddha doesn't tell you to stop wanting to get out of bed, eat, or meditate. See [Lesson 2](../2-the-cause/02-craving.md).
 - **Job: abandon it.** Let it go, not suppress it.
 
 ### Step 4: Truth 3, The ending (*nirodha*)
@@ -62,10 +62,10 @@ Understand stress → drop craving → see the ending → keep building the path
 ## Common mix-ups
 
 - **"Buddhism is pessimistic."** The second half (end of stress) is the main point.
-- **"Stop all desire."** Skillful desire (for wisdom, for goodness) fuels the path. Craving gets dropped *at the end*. See [Lesson 3](03-craving.md).
+- **"Stop all desire."** Skillful desire (for wisdom, for goodness) fuels the path. Craving gets dropped *at the end*. See [Lesson 2](../2-the-cause/02-craving.md).
 - **"Truths to believe."** They're tasks to perform.
 
 ## Go deeper (optional)
 
 - Ṭhānissaro Bhikkhu, [*Four Noble Truths*](https://www.dhammatalks.org/books/FourNobleTruths/)
-- Next: [Lesson 3: Craving](03-craving.md)
+- Next: [Lesson 2: Craving](../2-the-cause/02-craving.md)

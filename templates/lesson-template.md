@@ -1,6 +1,6 @@
 # Lesson N: Title
 
-**Time: X minutes** · Source: [sutta](link)
+**Time: X minutes** · Source: [sutta](https://www.dhammatalks.org/suttas/)
 
 ## Two-minute version
 
