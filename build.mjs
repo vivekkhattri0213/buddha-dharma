@@ -49,6 +49,8 @@ for (const [src, out] of pages) {
   const depth = out.split("/").length - 1;
   const root = depth ? "../".repeat(depth) : "./";
 
+  body = body.replace(/href="LICENSE"/g, `href="${root}LICENSES/MIT.txt"`);
+
   let pager = "";
   const i = lessons.indexOf(out);
   if (i !== -1) {
@@ -83,6 +85,12 @@ ${pager}
   mkdirSync(dirname(join(OUT, out)), { recursive: true });
   writeFileSync(join(OUT, out), html);
 }
+
+// copy full license texts
+mkdirSync(join(OUT, "LICENSES"), { recursive: true });
+for (const f of readdirSync("LICENSES")) copyFileSync(join("LICENSES", f), join(OUT, "LICENSES", f));
+
+copyFileSync("LICENSE", join(OUT, "LICENSES", "MIT.txt"));
 
 writeFileSync(join(OUT, ".nojekyll"), "");
 console.log(`Built ${pages.length} pages into ${OUT}/`);
