@@ -92,5 +92,9 @@ for (const f of readdirSync("LICENSES")) copyFileSync(join("LICENSES", f), join(
 
 copyFileSync("LICENSE", join(OUT, "LICENSES", "MIT.txt"));
 
+// copy images
+mkdirSync(join(OUT, "lessons/img"), { recursive: true });
+for (const f of readdirSync("lessons/img")) copyFileSync(join("lessons/img", f), join(OUT, "lessons/img", f));
+
 writeFileSync(join(OUT, ".nojekyll"), "");
 console.log(`Built ${pages.length} pages into ${OUT}/`);
