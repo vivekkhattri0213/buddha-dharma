@@ -1,0 +1,47 @@
+<header class="hero wrap">
+  <p class="eyebrow">Thai Forest tradition · after Ṭhānissaro Bhikkhu</p>
+  <h1>The Buddha’s teachings. One small step at a time.</h1>
+  <p class="lede">Short, ADHD-friendly lessons. Five to ten minutes each. Stopping halfway is fine.</p>
+  <div class="ctas">
+    <a class="btn" id="cta" href="{{FIRST}}">Start Lesson 1</a>
+    <a class="chev" href="lessons/00-start-here/how-to-use.html">How these lessons work</a>
+  </div>
+  <div class="facts">
+    <div><b>{{COUNT}}</b>lessons</div>
+    <div><b>{{TRACK_COUNT}}</b>tracks</div>
+    <div><b>2 min</b>shortest read</div>
+    <div><b>0</b>beliefs required</div>
+  </div>
+</header>
+
+<section class="band" id="paths">
+  <div class="wrap">
+    <h2 class="sec-h">Choose your path.</h2>
+    <p class="sec-sub">Pick the one that matches your brain right now. You don’t need to read in order.</p>
+    <div class="paths">
+      <a class="path" href="lessons/1-the-problem/01-four-noble-truths.html#two-minute-version"><span class="k">2 minutes</span><span class="v">Just the gist</span><span class="d">Read the two-minute version at the top of Lesson 1. Done.</span><span class="chev">Four Noble Truths</span></a>
+      <a class="path" href="lessons/1-the-problem/01-four-noble-truths.html"><span class="k">10 minutes</span><span class="v">One full lesson</span><span class="d">Start at the beginning and read Lesson 1 all the way through.</span><span class="chev">Start reading</span></a>
+      <a class="path" href="lessons/2-the-cause/02-craving.html#try-it-now-3-minutes"><span class="k">Energy to do</span><span class="v">Try a practice</span><span class="d">Skip to “Try it now” in Craving or Dependent Origination.</span><span class="chev">Craving</span></a>
+      <a class="path" href="#glossary"><span class="k">A word</span><span class="v">Look it up</span><span class="d">Pali terms in plain English. Skim, don’t memorize.</span><span class="chev">Glossary</span></a>
+      <a class="path" href="lessons/00-start-here/how-to-use.html"><span class="k">First time</span><span class="v">Start here</span><span class="d">Two minutes on how every lesson is shaped, then go in order.</span><span class="chev">How to use</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="lessons">
+  <div class="wrap">
+    <h2 class="sec-h">The lessons, in order.</h2>
+    <p class="sec-sub">Tick a lesson when you finish it. Your browser remembers.</p>
+    <div class="tracks">{{TRACKS}}</div>
+  </div>
+</section>
+
+<section class="band" id="glossary">
+  <div class="wrap">
+    <h2 class="sec-h">Glossary.</h2>
+    <p class="sec-sub">Quick lookups for the Pali words you’ll meet along the way.</p>
+    <input id="gl-q" class="gl-search" type="search" aria-label="Search the glossary" placeholder="Search terms, like dukkha or craving" autocomplete="off">
+    <div class="gl" id="gl">{{GLOSSARY}}</div>
+    <p class="gl-empty" id="gl-empty" hidden>No term matches that search.</p>
+  </div>
+</section>

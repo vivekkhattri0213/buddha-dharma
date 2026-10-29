@@ -13,6 +13,7 @@ function walk(dir) {
     .flatMap((e) => (e.isDirectory() ? (e.name === "img" ? [] : walk(join(dir, e.name))) : e.name.endsWith(".md") ? [join(dir, e.name)] : []));
 }
 
+// README.md stays in the list so links to it resolve to index.html, but the home page is built from site/home.html
 const pages = [
   ["README.md", "index.html"],
   ["SOURCES.md", "SOURCES.html"],
@@ -43,6 +44,23 @@ const moved = {
 };
 
 const css = readFileSync("site/style.css", "utf8");
+const homeTemplate = readFileSync("site/home.html", "utf8");
+
+// Tracks and lesson one-liners come from the README tables, so the README stays the source of truth
+const readme = readFileSync("README.md", "utf8");
+const tracks = [...readme.matchAll(/^### Track (\d+): (.+)\n(.+)\n\n((?:\|.*\n)+)/gm)].map(([, n, name, desc, table]) => ({
+  n: Number(n),
+  name,
+  desc,
+  lessons: [...table.matchAll(/^\| (\d+) \| \[(.+?)\]\((.+?)\.md\) \| (.+?) \| (.+?) \|$/gm)].map(([, num, title, path, time, one]) => ({
+    n: Number(num), title, out: path + ".html", time, one,
+  })),
+}));
+const lessonMeta = Object.fromEntries(tracks.flatMap((t) => t.lessons.map((l) => [l.out, { ...l, track: t }])));
+const trackColor = (n) => `var(--t${((n - 1) % 4) + 1})`;
+
+const glossary = [...readFileSync("lessons/reference/glossary.md", "utf8").matchAll(/^\| \*(.+?)\* \| (.+?) \| (.+?) \|$/gm)]
+  .map(([, pali, english, meaning]) => ({ pali, english, meaning }));
 
 function rewriteLinks(html, src) {
   return html.replace(/href="([^"#:]+?)\.md(#[^"]*)?"/g, (_, path, hash = "") => {
@@ -59,12 +77,74 @@ function slug(text) {
   return text.toLowerCase().replace(/<[^>]+>/g, "").replace(/[^\w]+/g, "-").replace(/^-|-$/g, "");
 }
 
+const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
+// Put the "Two-minute version" and "Try it now" sections in highlighted boxes
+function callouts(body) {
+  return body.split(/(?=<h2 )/).map((chunk) => {
+    if (/^<h2[^>]*>Two-minute version/.test(chunk)) return `<div class="callout summary"><span class="tag">If you only have two minutes</span>${chunk}</div>\n`;
+    if (/^<h2[^>]*>Try it now/.test(chunk)) return `<div class="callout try"><span class="tag">Practice</span>${chunk}</div>\n`;
+    return chunk;
+  }).join("");
+}
+
+const wheel = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><circle cx="12" cy="12" r="2.2"/><path d="M12 2.8v6.9M12 14.3v6.9M2.8 12h6.9M14.3 12h6.9M5.5 5.5l4.9 4.9M13.6 13.6l4.9 4.9M18.5 5.5l-4.9 4.9M10.4 13.6l-4.9 4.9"/></svg>`;
+
+// Progress is saved in this browser only, as lesson-N = "1"
+function script(root) {
+  const links = JSON.stringify(lessons.map((o) => root + o));
+  return `<script>(function(){var L=${links},N=L.length;
+function get(n){try{return localStorage.getItem("lesson-"+n)==="1"}catch(e){return false}}
+function set(n,on){try{localStorage.setItem("lesson-"+n,on?"1":"0")}catch(e){}}
+function sync(){var c=0,next=0;for(var i=1;i<=N;i++){if(get(i))c++;else if(!next)next=i}
+document.querySelectorAll("input[data-lesson]").forEach(function(b){b.checked=get(b.dataset.lesson)});
+document.getElementById("prog").textContent=c+" of "+N+" done";
+var d=document.getElementById("done-label");if(d)d.textContent=get(d.dataset.lesson)?"Done":"Mark as done";
+var a=document.getElementById("cta");if(a&&c){a.textContent=next?"Continue with Lesson "+next:"Read again from Lesson 1";a.href=L[(next||1)-1]}}
+document.addEventListener("change",function(e){var n=e.target.dataset&&e.target.dataset.lesson;if(n){set(n,e.target.checked);sync()}});
+var q=document.getElementById("gl-q");if(q)q.addEventListener("input",function(){var v=q.value.trim().toLowerCase(),shown=0;
+document.querySelectorAll("#gl .term").forEach(function(t){var on=!v||t.textContent.toLowerCase().indexOf(v)!==-1;t.hidden=!on;if(on)shown++});
+document.getElementById("gl").hidden=!shown;document.getElementById("gl-empty").hidden=!!shown});
+sync()})();</script>`;
+}
+
+function shell({ title, root, main, description }) {
+  const home = root === "./" ? "" : `${root}index.html`;
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>${title}</title>
+<meta name="description" content="${description || "Beginner-friendly, step-by-step guide to the Buddha's core teachings, in the Thai Forest tradition."}">
+<style>${css}</style>
+</head>
+<body>
+<nav class="top" aria-label="Main"><div class="wrap">
+<a class="brand" href="${root}index.html">${wheel}${SITE}</a>
+<a class="nl" href="${home}#paths">Paths</a>
+<a class="nl" href="${home}#lessons">Lessons</a>
+<a class="nl" href="${home}#glossary">Glossary</a>
+<a class="nl" href="${root}SOURCES.html">Sources</a>
+<span class="prog" id="prog" aria-live="polite"></span>
+</div></nav>
+${main}
+<footer><div class="wrap">
+<p>A study aid written by a learner, not an authority. Each lesson links to the original suttas and to Ṭhānissaro Bhikkhu’s free books, so check the sources. This is not therapy or medical advice. If you’re struggling, please talk to a professional.</p>
+<p>Original text © its contributors, <a href="${root}LICENSE.html">CC BY-SA 4.0</a>. Quoted sutta and book material belongs to its authors and translators; see <a href="${root}SOURCES.html">Sources</a>.</p>
+</div></footer>
+${script(root)}
+</body>
+</html>
+`;
+}
+
 rmSync(OUT, { recursive: true, force: true });
 mkdirSync(OUT, { recursive: true });
 
 for (const [src, out] of pages) {
+  if (out === "index.html") continue;
   const md = readFileSync(src, "utf8");
-  const title = (md.match(/^# (.+)$/m) || [null, SITE])[1];
   let body = marked.parse(md, { gfm: true });
   body = body.replace(/<h([23])>(.*?)<\/h\1>/g, (_, l, t) => `<h${l} id="${slug(t)}">${t}</h${l}>`);
   body = rewriteLinks(body, src);
@@ -74,51 +154,83 @@ for (const [src, out] of pages) {
 
   body = body.replace(/href="LICENSE"/g, `href="${root}LICENSES/MIT.txt"`);
 
+  // Title and "Time:" line move into the page header
+  let title = SITE;
+  body = body.replace(/<h1>(.*?)<\/h1>\n?/, (_, t) => ((title = t), ""));
+  let time = "";
+  body = body.replace(/<p><strong>Time: ([^<]+)<\/strong>(?: · )?([\s\S]*?)<\/p>\n?/, (_, t, rest) => ((time = t), rest ? `<p class="src">${rest}</p>\n` : ""));
+  body = body.replace(/<table>/g, `<div class="tbl"><table>`).replace(/<\/table>/g, "</table></div>");
+  body = callouts(body);
+
+  const meta = lessonMeta[out];
+  const lessonNum = /^0([1-9])-/.test(basename(out)) ? Number(basename(out)[1]) : null;
+  const heading = title.replace(/^Lesson \d+: /, "");
+  const crumbs = meta
+    ? `<a href="${root}index.html#lessons">‹ All lessons</a><span class="sep">/</span><span style="color:${trackColor(meta.track.n)}">Track ${meta.track.n} · ${meta.track.name}</span>`
+    : `<a href="${root}index.html">‹ Home</a>`;
+  const done = lessonNum
+    ? `<label class="done-toggle"><input type="checkbox" class="check" data-lesson="${lessonNum}"> <span id="done-label" data-lesson="${lessonNum}">Mark as done</span></label>`
+    : "";
+
   let pager = "";
   const i = lessons.indexOf(out);
   if (i !== -1) {
     const prev = lessons[i - 1], next = lessons[i + 1];
     const href = (p) => relative(dirname(out), p);
+    const name = (p) => (lessonMeta[p] ? lessonMeta[p].title : basename(p, ".html"));
     pager = `<nav class="pager" aria-label="Lesson navigation">
-      ${prev ? `<a href="${href(prev)}">&larr; Previous lesson</a>` : "<span></span>"}
-      ${next ? `<a href="${href(next)}">Next lesson &rarr;</a>` : "<span></span>"}
+      ${prev ? `<a class="prev" href="${href(prev)}"><span class="k">‹ Lesson ${i}</span><span class="v">${name(prev)}</span></a>` : ""}
+      ${next
+        ? `<a class="next" href="${href(next)}"><span class="k">Lesson ${i + 2} ›</span><span class="v">${name(next)}</span></a>`
+        : `<a class="next" href="${root}index.html#lessons"><span class="k">You finished all ${lessons.length} ›</span><span class="v">Back to the lessons</span></a>`}
     </nav>`;
   }
 
-  // Progress: tick boxes on the home page, "mark done" button on lessons (saved in this browser only)
-  const lessonNum = /^0([1-9])-/.test(basename(out)) ? Number(basename(out)[1]) : null;
-  const script = out === "index.html"
-    ? `<script>try{document.querySelectorAll("main li input[type=checkbox]").forEach(function(b){var m=b.parentElement.textContent.match(/Lesson (\\d)/);if(!m)return;var k="lesson-"+m[1];b.disabled=false;b.checked=localStorage.getItem(k)==="1";b.addEventListener("change",function(){localStorage.setItem(k,b.checked?"1":"0")})})}catch(e){}</script>`
-    : lessonNum
-      ? `<script>try{var k="lesson-${lessonNum}",b=document.getElementById("done-btn");function r(){b.textContent=localStorage.getItem(k)==="1"?"✓ Done (tap to undo)":"Mark this lesson done";b.setAttribute("aria-pressed",localStorage.getItem(k)==="1")}b.hidden=false;r();b.addEventListener("click",function(){localStorage.setItem(k,localStorage.getItem(k)==="1"?"0":"1");r()})}catch(e){}</script>`
-      : "";
-  const doneBtn = lessonNum ? `<p class="done"><button id="done-btn" type="button" hidden>Mark this lesson done</button></p>` : "";
-
-  const html = `<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${title.replace(/<[^>]+>/g, "")} · ${SITE}</title>
-<meta name="description" content="Beginner-friendly, step-by-step guide to the Buddha's core teachings, in the Thai Forest tradition.">
-<style>${css}</style>
-</head>
-<body>
-<header class="top"><a class="brand" href="${root}index.html">☸ ${SITE}</a>
-<nav><a href="${root}lessons/reference/glossary.html">Glossary</a> <a href="${root}SOURCES.html">Sources</a></nav></header>
-<main>
+  const main = `<main class="wrap read">
+<header class="page-head">
+<div class="crumbs">${crumbs}</div>
+<h1>${heading}</h1>
+<div class="rmeta">${time ? `<span>${time} read</span>` : ""}${done}</div>
+</header>
+<article class="md">
 ${body}
-${doneBtn}
+</article>
 ${pager}
-</main>
-<footer>Original text © its contributors, <a href="${root}LICENSE.html">CC BY-SA 4.0</a>. A study aid, not an authority: check the sources.</footer>
-${script}
-</body>
-</html>
-`;
+</main>`;
+
   mkdirSync(dirname(join(OUT, out)), { recursive: true });
-  writeFileSync(join(OUT, out), html);
+  writeFileSync(join(OUT, out), shell({ title: `${heading.replace(/<[^>]+>/g, "")} · ${SITE}`, root, main }));
 }
+
+// Home page: site/home.html with the tracks and glossary filled in
+const trackHtml = tracks.map((t) => `
+      <div>
+        <div class="track-h"><span class="tn" style="color:${trackColor(t.n)}">Track ${t.n}</span><h3>${t.name}</h3></div>
+        <p class="track-d">${t.desc}</p>
+        <ul class="lessons">${t.lessons.map((l) => `
+          <li class="lesson">
+            <span class="num">${l.n}</span>
+            <div class="body"><a class="t" href="${l.out}">${esc(l.title)}</a><div class="one">${esc(l.one)}</div></div>
+            <div class="meta"><span class="time">${l.time}</span><input type="checkbox" class="check" data-lesson="${l.n}" aria-label="Mark lesson ${l.n} done"></div>
+          </li>`).join("")}
+        </ul>
+      </div>`).join("");
+const glossaryHtml = glossary.map((g) => `
+      <div class="term"><div class="p">${g.pali}</div><div class="e">${g.english}</div><div class="m">${g.meaning}</div></div>`).join("");
+const homeMain = `<main>
+${homeTemplate
+  .replace("{{FIRST}}", lessons[0])
+  .replace("{{COUNT}}", lessons.length)
+  .replace("{{TRACK_COUNT}}", tracks.length)
+  .replace("{{TRACKS}}", trackHtml)
+  .replace("{{GLOSSARY}}", glossaryHtml)}
+</main>`;
+writeFileSync(join(OUT, "index.html"), shell({
+  title: SITE,
+  root: "./",
+  main: homeMain,
+  description: "Seven short, beginner-friendly lessons on the Buddha's core teachings, in the Thai Forest tradition. Built for brains that get overwhelmed easily.",
+}));
 
 // copy full license texts
 mkdirSync(join(OUT, "LICENSES"), { recursive: true });
@@ -138,4 +250,4 @@ for (const [oldPath, newPath] of Object.entries(moved)) {
 }
 
 writeFileSync(join(OUT, ".nojekyll"), "");
-console.log(`Built ${pages.length} pages into ${OUT}/`);
+console.log(`Built ${pages.length} pages into ${OUT}/ (${tracks.length} tracks, ${glossary.length} glossary terms)`);

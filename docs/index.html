@@ -2,213 +2,291 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Buddha's Teachings, One Small Step at a Time · Buddha's Teachings, Step by Step</title>
-<meta name="description" content="Beginner-friendly, step-by-step guide to the Buddha's core teachings, in the Thai Forest tradition.">
-<style>:root{--bg:#fbf8f3;--fg:#2a2622;--muted:#6b635a;--accent:#b45309;--card:#fff;--line:#e7e0d5;--code:#f3ede3}
-@media (prefers-color-scheme:dark){:root{--bg:#1c1a17;--fg:#ece6dc;--muted:#a39a8d;--accent:#f0a24b;--card:#26231f;--line:#3a352e;--code:#2c2822}}
-*{box-sizing:border-box}
-html{font-size:18px}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.7}
-.top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;padding:.8rem 1rem;border-bottom:1px solid var(--line);background:var(--card);position:sticky;top:0;z-index:5}
-.top a{color:var(--fg);text-decoration:none}.top nav a{margin-left:1rem;color:var(--muted)}
-.brand{font-weight:700}
-main{max-width:42rem;margin:0 auto;padding:1.5rem 1rem 3rem}
-h1{font-size:1.9rem;line-height:1.25;margin:.5rem 0 1rem}
-h2{font-size:1.35rem;margin:2.2rem 0 .6rem;padding-top:.4rem;border-top:1px solid var(--line)}
-h3{font-size:1.1rem;margin:1.6rem 0 .4rem;color:var(--accent)}
-p,li{max-width:40rem}
-li{margin:.35rem 0}
-a{color:var(--accent)}
-a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-blockquote{margin:1rem 0;padding:.6rem 1rem;border-left:4px solid var(--accent);background:var(--card);border-radius:0 8px 8px 0}
-blockquote p{margin:.3rem 0}
-table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:.92rem;display:block;overflow-x:auto}
-th,td{border:1px solid var(--line);padding:.5rem .7rem;text-align:left;vertical-align:top}
-th{background:var(--code)}
-details{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:.5rem .9rem;margin:.6rem 0}
-summary{cursor:pointer;font-weight:600}
-code{background:var(--code);padding:.1em .35em;border-radius:4px}
-ul:has(input[type=checkbox]){list-style:none;padding-left:.2rem}
-input[type=checkbox]{transform:scale(1.25);margin-right:.5rem;accent-color:var(--accent)}
-.pager{display:flex;justify-content:space-between;gap:1rem;margin-top:3rem}
-.pager a{padding:.7rem 1rem;border:1px solid var(--line);border-radius:8px;background:var(--card);text-decoration:none;font-weight:600}
-footer{text-align:center;color:var(--muted);font-size:.8rem;padding:1.5rem 1rem}
-@media (max-width:600px){html{font-size:17px}}
-img{max-width:100%;height:auto;border-radius:10px;margin:.5rem 0}
-.done{margin-top:2.5rem}.done button{font:inherit;font-weight:600;padding:.7rem 1rem;border:2px solid var(--accent);border-radius:8px;background:transparent;color:var(--accent);cursor:pointer}.done button[aria-pressed=true]{background:var(--accent);color:var(--bg)}
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Buddha's Teachings, Step by Step</title>
+<meta name="description" content="Seven short, beginner-friendly lessons on the Buddha's core teachings, in the Thai Forest tradition. Built for brains that get overwhelmed easily.">
+<style>/* Apple-style tokens: white / grey bands, system type, one blue accent. Dark mode follows the OS. */
+:root{--bg:#fff;--band:#f5f5f7;--card:#fff;--fg:#1d1d1f;--fg2:#6e6e73;--hair:#d2d2d7;--accent:#0071e3;--link:#0066cc;--nav:rgba(251,251,253,.8);--green:#248a3d;--t1:#c93400;--t2:#bf4800;--t3:#3634a3;--t4:#0071a4;--max:980px;--read:692px;
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display","Helvetica Neue",Helvetica,Arial,system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root{--bg:#000;--band:#101012;--card:#1c1c1e;--fg:#f5f5f7;--fg2:#a1a1a6;--hair:#38383a;--link:#2997ff;--nav:rgba(22,22,23,.8);--green:#30d158;--t1:#ff9f0a;--t2:#ff9f0a;--t3:#7d7aff;--t4:#64d2ff;color-scheme:dark}}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);font-size:17px;line-height:1.47;letter-spacing:-.022em;-webkit-font-smoothing:antialiased}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(22px,env(safe-area-inset-left,0px));padding-right:max(22px,env(safe-area-inset-right,0px))}
+.wrap.read{max-width:calc(var(--read) + 44px)}
+
+/* Nav */
+nav.top{position:sticky;top:0;z-index:9;background:var(--nav);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--hair)}
+nav.top .wrap{display:flex;align-items:center;gap:24px;height:48px;font-size:12px;letter-spacing:-.01em}
+nav.top .brand{font-weight:600;font-size:14px;color:var(--fg);margin-right:auto;display:flex;align-items:center;gap:8px;min-width:0}
+nav.top .brand svg{width:18px;height:18px;flex:none}
+nav.top a.nl{color:var(--fg);opacity:.8}
+nav.top a:hover{opacity:1;text-decoration:none}
+.prog{font-variant-numeric:tabular-nums;background:var(--band);color:var(--fg2);padding:3px 10px;border-radius:980px;white-space:nowrap}
+@media (max-width:640px){nav.top a.nl{display:none}}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;background:var(--accent);color:#fff;font-size:17px;padding:11px 22px;border-radius:980px}
+.btn:hover{text-decoration:none;filter:brightness(1.08)}
+.chev::after{content:" ›"}
+
+/* Home */
+.hero{text-align:center;padding-block:88px 72px}
+.eyebrow{font-size:14px;font-weight:600;color:var(--t1);letter-spacing:0;margin:0 0 10px}
+.hero h1{font-size:clamp(40px,7vw,72px);line-height:1.05;letter-spacing:-.015em;font-weight:700;margin:0 auto;max-width:13ch;text-wrap:balance}
+.hero .lede{font-size:clamp(19px,2.4vw,24px);line-height:1.33;color:var(--fg2);max-width:30ch;margin:18px auto 30px;text-wrap:balance;letter-spacing:.005em}
+.hero .ctas{display:flex;gap:14px 28px;justify-content:center;align-items:center;flex-wrap:wrap}
+.hero .facts{display:flex;justify-content:center;gap:12px 40px;flex-wrap:wrap;margin-top:56px;color:var(--fg2);font-size:14px}
+.hero .facts b{display:block;color:var(--fg);font-size:28px;font-weight:600;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+section.band{background:var(--band)}
+section>.wrap{padding-block:80px}
+.sec-h{font-size:clamp(32px,5vw,48px);line-height:1.08;font-weight:700;letter-spacing:-.01em;margin:0 0 8px;text-wrap:balance}
+.sec-sub{color:var(--fg2);font-size:21px;line-height:1.38;margin:0 0 40px;max-width:40ch}
+.paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px}
+.path{background:var(--card);border-radius:18px;padding:24px 22px 22px;display:flex;flex-direction:column;gap:8px;color:var(--fg);min-width:0;transition:transform .25s ease,box-shadow .25s ease}
+.path:hover{text-decoration:none;transform:scale(1.015);box-shadow:0 8px 28px rgba(0,0,0,.08)}
+.path .k{font-size:12px;font-weight:600;color:var(--fg2);text-transform:uppercase;letter-spacing:.06em}
+.path .v{font-size:21px;font-weight:600;line-height:1.2;letter-spacing:-.01em}
+.path .d{font-size:15px;color:var(--fg2);line-height:1.4}
+.path .chev{margin-top:auto;padding-top:6px;font-size:15px;color:var(--link)}
+.tracks{display:grid;gap:56px}
+.track-h{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:4px}
+.track-h .tn{font-size:14px;font-weight:600}
+.track-h h3{font-size:28px;font-weight:600;margin:0;letter-spacing:-.01em}
+.track-d{color:var(--fg2);margin:0 0 18px}
+.lessons{list-style:none;margin:0;padding:0;border-top:1px solid var(--hair)}
+.lesson{display:grid;grid-template-columns:44px 1fr auto;gap:4px 18px;align-items:center;padding-block:18px;border-bottom:1px solid var(--hair)}
+.lesson .num{font-size:28px;font-weight:300;color:var(--fg2);font-variant-numeric:tabular-nums;text-align:center}
+.lesson .body{min-width:0}
+.lesson a.t{font-size:19px;font-weight:600;color:var(--fg);letter-spacing:-.01em}
+.lesson a.t:hover{color:var(--link);text-decoration:none}
+.lesson .one{color:var(--fg2);font-size:15px;margin-top:2px}
+.lesson .meta{display:flex;align-items:center;gap:14px}
+.lesson .time{font-size:14px;color:var(--fg2);font-variant-numeric:tabular-nums;white-space:nowrap}
+@media (max-width:560px){.lesson{grid-template-columns:32px 1fr}.lesson .num{font-size:22px}.lesson .meta{grid-column:2}}
+.gl-search{width:100%;max-width:420px;font:inherit;font-size:17px;padding:12px 18px;border-radius:12px;border:1px solid var(--hair);background:var(--card);color:var(--fg);margin-bottom:28px}
+.gl{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1px;background:var(--hair);border:1px solid var(--hair);border-radius:18px;overflow:hidden}
+.term{background:var(--card);padding:20px 22px;min-width:0}
+.term .p{font-style:italic;font-size:19px;font-weight:600}
+.term .e{font-size:13px;color:var(--fg2);text-transform:uppercase;letter-spacing:.06em;font-weight:600;margin:2px 0 8px}
+.term .m{font-size:15px;line-height:1.45}
+.gl-empty{color:var(--fg2)}
+
+/* Done checkbox (home list and lesson header) */
+.check{appearance:none;-webkit-appearance:none;width:26px;height:26px;margin:0;border-radius:50%;border:1.5px solid var(--hair);background:transparent;cursor:pointer;display:grid;place-items:center;flex:none;transition:background .2s,border-color .2s}
+.check::after{content:"";width:7px;height:12px;border:solid transparent;border-width:0 2px 2px 0;transform:translateY(-1px) rotate(45deg)}
+.check:checked{background:var(--green);border-color:var(--green)}
+.check:checked::after{border-color:#fff}
+
+/* Reading pages */
+.page-head{padding-block:56px 8px}
+.crumbs{font-size:14px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:26px}
+.crumbs .sep{color:var(--fg2)}
+.page-head h1{font-size:clamp(34px,5.5vw,56px);line-height:1.07;font-weight:700;letter-spacing:-.012em;margin:0 0 14px;text-wrap:balance}
+.rmeta{display:flex;gap:10px 20px;align-items:center;flex-wrap:wrap;color:var(--fg2);font-size:15px}
+.rmeta:empty{display:none}
+.done-toggle{display:inline-flex;align-items:center;gap:10px;cursor:pointer;color:var(--fg)}
+.md{padding-block:16px 24px;font-size:17px;line-height:1.6}
+.md .src{color:var(--fg2);font-size:15px}
+.md h2{font-size:28px;line-height:1.15;letter-spacing:-.01em;font-weight:700;margin:56px 0 14px;text-wrap:balance}
+.md h3{font-size:21px;font-weight:600;margin:32px 0 8px;letter-spacing:-.01em}
+.md p,.md ul,.md ol{margin:0 0 14px}
+.md ul,.md ol{padding-left:1.3em}
+.md li{margin:4px 0}
+.md li::marker{color:var(--fg2)}
+.md img{display:block;width:100%;height:auto;border-radius:18px;margin:24px 0}
+.md blockquote{margin:20px 0;padding:4px 0 4px 20px;border-left:3px solid var(--hair);color:var(--fg2)}
+.md code{background:var(--band);padding:.1em .35em;border-radius:5px;font-size:.9em}
+.md pre{background:var(--band);padding:14px 16px;border-radius:12px;overflow-x:auto}
+.md pre code{padding:0;background:none}
+.md .tbl{overflow-x:auto;margin:18px 0 22px;border:1px solid var(--hair);border-radius:14px;background:var(--card)}
+.md table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.4}
+.md th{text-align:left;font-weight:600;font-size:13px;color:var(--fg2);text-transform:uppercase;letter-spacing:.04em;background:var(--band)}
+.md th,.md td{padding:11px 14px;border-bottom:1px solid var(--hair);vertical-align:top}
+.md tr:last-child td{border-bottom:0}
+.md details{border-bottom:1px solid var(--hair);padding:14px 0}
+.md details:first-of-type{border-top:1px solid var(--hair)}
+.md summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.md summary::-webkit-details-marker{display:none}
+.md summary::after{content:"+";color:var(--link);font-weight:400;font-size:22px;line-height:1}
+.md details[open] summary::after{content:"−"}
+.md details[open]{color:var(--fg2)}
+.md details[open] summary{color:var(--fg);margin-bottom:8px}
+.md ul:has(>li>input){list-style:none;padding-left:0}
+.md input[type=checkbox]{accent-color:var(--accent);margin-right:6px}
+.callout{background:var(--band);border-radius:22px;padding:26px 28px 14px;margin:28px 0}
+.callout>h2{margin-top:0;font-size:21px}
+.callout .tag{display:block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+.callout.summary .tag{color:var(--t1)}
+.callout.try .tag{color:var(--green)}
+@media (max-width:560px){.callout{padding:22px 18px 10px;border-radius:18px}}
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding-block:24px 96px}
+.pager a{background:var(--band);border-radius:18px;padding:18px 22px;color:var(--fg);min-width:0}
+.pager a:hover{text-decoration:none;filter:brightness(.97)}
+.pager .k{display:block;font-size:13px;color:var(--fg2)}
+.pager .v{font-weight:600}
+.pager a.next{text-align:right;grid-column:2}
+@media (max-width:560px){.pager{grid-template-columns:1fr}.pager a.next{grid-column:1}}
+
+/* Footer */
+footer{border-top:1px solid var(--hair);background:var(--band);color:var(--fg2);font-size:12px;line-height:1.5}
+footer .wrap{padding-block:28px 40px;display:grid;gap:12px}
+footer p{margin:0;max-width:80ch}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
-<header class="top"><a class="brand" href="./index.html">☸ Buddha's Teachings, Step by Step</a>
-<nav><a href="./lessons/reference/glossary.html">Glossary</a> <a href="./SOURCES.html">Sources</a></nav></header>
+<nav class="top" aria-label="Main"><div class="wrap">
+<a class="brand" href="./index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><circle cx="12" cy="12" r="2.2"/><path d="M12 2.8v6.9M12 14.3v6.9M2.8 12h6.9M14.3 12h6.9M5.5 5.5l4.9 4.9M13.6 13.6l4.9 4.9M18.5 5.5l-4.9 4.9M10.4 13.6l-4.9 4.9"/></svg>Buddha's Teachings, Step by Step</a>
+<a class="nl" href="#paths">Paths</a>
+<a class="nl" href="#lessons">Lessons</a>
+<a class="nl" href="#glossary">Glossary</a>
+<a class="nl" href="./SOURCES.html">Sources</a>
+<span class="prog" id="prog" aria-live="polite"></span>
+</div></nav>
 <main>
-<h1>Buddha&#39;s Teachings, One Small Step at a Time</h1>
-<p>A beginner-friendly guide to the Buddha&#39;s core teachings, built for brains that get overwhelmed easily (ADHD-friendly by design). It leans on the <strong>Thai Forest tradition</strong> and the translations and books of <strong>Ṭhānissaro Bhikkhu</strong> (Ajaan Geoff).</p>
-<blockquote>
-<p>You don&#39;t need to read everything. You don&#39;t need to read in order. One lesson = 5-10 minutes. Stopping halfway is fine.</p>
-</blockquote>
-<h2 id="choose-your-path">Choose your path</h2>
-<p>Pick the row that matches your brain right now.</p>
-<table>
-<thead>
-<tr>
-<th>You have...</th>
-<th>Do this</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>2 minutes</strong></td>
-<td>Read only the &quot;Two-minute version&quot; at the top of <a href="lessons/1-the-problem/01-four-noble-truths.html">Lesson 1</a>. Done.</td>
-</tr>
-<tr>
-<td><strong>10 minutes</strong></td>
-<td>Read one full lesson. Start with <a href="lessons/1-the-problem/01-four-noble-truths.html">Lesson 1</a>.</td>
-</tr>
-<tr>
-<td><strong>Energy to <em>do</em> something</strong></td>
-<td>Skip to the &quot;Try it now&quot; at the bottom of <a href="lessons/2-the-cause/02-craving.html">Lesson 2: Craving</a> or <a href="lessons/3-how-it-works/05-dependent-origination.html">Lesson 5: Dependent Origination</a>.</td>
-</tr>
-<tr>
-<td><strong>A word you don&#39;t know</strong></td>
-<td>Check the <a href="lessons/reference/glossary.html">Glossary</a>.</td>
-</tr>
-<tr>
-<td><strong>First time here</strong></td>
-<td>Read <a href="lessons/00-start-here/how-to-use.html">How to use this repo</a> (2 min), then go in order below.</td>
-</tr>
-</tbody></table>
-<h2 id="the-lessons-in-order">The lessons, in order</h2>
-<p>Four tracks. Each lesson is numbered in the order to read it, and the website&#39;s &quot;Next lesson&quot; button follows the same order.</p>
-<h3 id="track-1-the-problem">Track 1: The Problem</h3>
-<p>What the Buddha said he was teaching about, in one framework.</p>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>Lesson</th>
-<th>Time</th>
-<th>The one-line version</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1</td>
-<td><a href="lessons/1-the-problem/01-four-noble-truths.html">The Four Noble Truths</a></td>
-<td>10 min</td>
-<td>Four jobs to do about stress, not four beliefs to hold</td>
-</tr>
-</tbody></table>
-<h3 id="track-2-the-cause">Track 2: The Cause</h3>
-<p>Where the stress comes from.</p>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>Lesson</th>
-<th>Time</th>
-<th>The one-line version</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>2</td>
-<td><a href="lessons/2-the-cause/02-craving.html">Craving: the 3 kinds</a></td>
-<td>7 min</td>
-<td>What actually causes the stress</td>
-</tr>
-<tr>
-<td>3</td>
-<td><a href="lessons/2-the-cause/03-clinging.html">Clinging: the 4 kinds</a></td>
-<td>7 min</td>
-<td>What the mind grabs onto and how</td>
-</tr>
-<tr>
-<td>4</td>
-<td><a href="lessons/2-the-cause/04-five-aggregates.html">The Five Aggregates</a></td>
-<td>10 min</td>
-<td>Five activities that make up &quot;you,&quot; none of them a self</td>
-</tr>
-</tbody></table>
-<h3 id="track-3-how-it-works">Track 3: How It Works</h3>
-<p>Putting the pieces together.</p>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>Lesson</th>
-<th>Time</th>
-<th>The one-line version</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>5</td>
-<td><a href="lessons/3-how-it-works/05-dependent-origination.html">Dependent Origination</a></td>
-<td>12 min</td>
-<td>The step-by-step chain that turns a moment into stress, and where to break it</td>
-</tr>
-<tr>
-<td>6</td>
-<td><a href="lessons/3-how-it-works/06-three-characteristics.html">The Three Characteristics</a></td>
-<td>10 min</td>
-<td>Three ways of looking that help you let go</td>
-</tr>
-</tbody></table>
-<h3 id="track-4-big-questions">Track 4: Big Questions</h3>
-<p>Easier once the rest is familiar.</p>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>Lesson</th>
-<th>Time</th>
-<th>The one-line version</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>7</td>
-<td><a href="lessons/4-big-questions/07-rebirth.html">What does &quot;reincarnation&quot; actually mean?</a></td>
-<td>10 min</td>
-<td>Rebirth as something the mind does, not a soul travelling</td>
-</tr>
-</tbody></table>
-<h3 id="reference">Reference</h3>
-<p><a href="lessons/reference/glossary.html">Glossary</a> · <a href="SOURCES.html">Sources &amp; further reading</a> · <a href="ROADMAP.html">Roadmap</a> · <a href="CONTRIBUTING.html">Contributing</a></p>
-<h2 id="track-your-progress">Track your progress</h2>
-<p><em>On the website you can tick these and your browser remembers them. On GitHub they&#39;re display-only.</em></p>
-<ul>
-<li><input disabled="" type="checkbox"> Lesson 1: Four Noble Truths</li>
-<li><input disabled="" type="checkbox"> Lesson 2: Craving</li>
-<li><input disabled="" type="checkbox"> Lesson 3: Clinging</li>
-<li><input disabled="" type="checkbox"> Lesson 4: Five Aggregates</li>
-<li><input disabled="" type="checkbox"> Lesson 5: Dependent Origination</li>
-<li><input disabled="" type="checkbox"> Lesson 6: Three Characteristics</li>
-<li><input disabled="" type="checkbox"> Lesson 7: Rebirth</li>
-</ul>
-<h2 id="who-this-is-for">Who this is for</h2>
-<ul>
-<li>Complete beginners who find most Buddhism explanations vague or wordy</li>
-<li>People who want <strong>practice</strong>, not just philosophy</li>
-<li>Anyone who has tried to read the suttas and bounced off</li>
-</ul>
-<h2 id="honest-disclaimers">Honest disclaimers</h2>
-<ul>
-<li>This is a study aid written by a learner, <strong>not</strong> an authority. Always check the sources.</li>
-<li>Each lesson links to the original suttas (early discourses) and Ṭhānissaro Bhikkhu&#39;s free books so you can go to the source.</li>
-<li>It is not therapy or medical advice. If you&#39;re struggling, please talk to a professional.</li>
-</ul>
-<h2 id="website">Website</h2>
-<p>The repo builds into a simple static site in <code>docs/</code> (served by GitHub Pages).</p>
-<ul>
-<li><strong>Publish:</strong> GitHub repo → Settings → Pages → Source: <em>Deploy from a branch</em> → Branch <code>main</code>, folder <code>/docs</code>.</li>
-<li><strong>After editing any <code>.md</code> file:</strong> run <code>npm install</code> once, then <code>npm run build</code>, and commit the updated <code>docs/</code>.</li>
-<li><strong>Preview locally:</strong> <code>cd docs &amp;&amp; python3 -m http.server 8000</code>, then open <a href="http://localhost:8000">http://localhost:8000</a>.</li>
-</ul>
-<h2 id="license">License</h2>
-<p>Lesson text is <a href="LICENSES/CC-BY-SA-4.0.txt">CC BY-SA 4.0</a>; code is MIT (see <a href="./LICENSES/MIT.txt">LICENSE</a>). Details and how to credit: <a href="LICENSE.html">LICENSE.md</a>. Quoted sutta and book material belongs to its authors and translators; see <a href="SOURCES.html">SOURCES.md</a>.</p>
+<header class="hero wrap">
+  <p class="eyebrow">Thai Forest tradition · after Ṭhānissaro Bhikkhu</p>
+  <h1>The Buddha’s teachings. One small step at a time.</h1>
+  <p class="lede">Short, ADHD-friendly lessons. Five to ten minutes each. Stopping halfway is fine.</p>
+  <div class="ctas">
+    <a class="btn" id="cta" href="lessons/1-the-problem/01-four-noble-truths.html">Start Lesson 1</a>
+    <a class="chev" href="lessons/00-start-here/how-to-use.html">How these lessons work</a>
+  </div>
+  <div class="facts">
+    <div><b>7</b>lessons</div>
+    <div><b>4</b>tracks</div>
+    <div><b>2 min</b>shortest read</div>
+    <div><b>0</b>beliefs required</div>
+  </div>
+</header>
 
+<section class="band" id="paths">
+  <div class="wrap">
+    <h2 class="sec-h">Choose your path.</h2>
+    <p class="sec-sub">Pick the one that matches your brain right now. You don’t need to read in order.</p>
+    <div class="paths">
+      <a class="path" href="lessons/1-the-problem/01-four-noble-truths.html#two-minute-version"><span class="k">2 minutes</span><span class="v">Just the gist</span><span class="d">Read the two-minute version at the top of Lesson 1. Done.</span><span class="chev">Four Noble Truths</span></a>
+      <a class="path" href="lessons/1-the-problem/01-four-noble-truths.html"><span class="k">10 minutes</span><span class="v">One full lesson</span><span class="d">Start at the beginning and read Lesson 1 all the way through.</span><span class="chev">Start reading</span></a>
+      <a class="path" href="lessons/2-the-cause/02-craving.html#try-it-now-3-minutes"><span class="k">Energy to do</span><span class="v">Try a practice</span><span class="d">Skip to “Try it now” in Craving or Dependent Origination.</span><span class="chev">Craving</span></a>
+      <a class="path" href="#glossary"><span class="k">A word</span><span class="v">Look it up</span><span class="d">Pali terms in plain English. Skim, don’t memorize.</span><span class="chev">Glossary</span></a>
+      <a class="path" href="lessons/00-start-here/how-to-use.html"><span class="k">First time</span><span class="v">Start here</span><span class="d">Two minutes on how every lesson is shaped, then go in order.</span><span class="chev">How to use</span></a>
+    </div>
+  </div>
+</section>
 
+<section id="lessons">
+  <div class="wrap">
+    <h2 class="sec-h">The lessons, in order.</h2>
+    <p class="sec-sub">Tick a lesson when you finish it. Your browser remembers.</p>
+    <div class="tracks">
+      <div>
+        <div class="track-h"><span class="tn" style="color:var(--t1)">Track 1</span><h3>The Problem</h3></div>
+        <p class="track-d">What the Buddha said he was teaching about, in one framework.</p>
+        <ul class="lessons">
+          <li class="lesson">
+            <span class="num">1</span>
+            <div class="body"><a class="t" href="lessons/1-the-problem/01-four-noble-truths.html">The Four Noble Truths</a><div class="one">Four jobs to do about stress, not four beliefs to hold</div></div>
+            <div class="meta"><span class="time">10 min</span><input type="checkbox" class="check" data-lesson="1" aria-label="Mark lesson 1 done"></div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div class="track-h"><span class="tn" style="color:var(--t2)">Track 2</span><h3>The Cause</h3></div>
+        <p class="track-d">Where the stress comes from.</p>
+        <ul class="lessons">
+          <li class="lesson">
+            <span class="num">2</span>
+            <div class="body"><a class="t" href="lessons/2-the-cause/02-craving.html">Craving: the 3 kinds</a><div class="one">What actually causes the stress</div></div>
+            <div class="meta"><span class="time">7 min</span><input type="checkbox" class="check" data-lesson="2" aria-label="Mark lesson 2 done"></div>
+          </li>
+          <li class="lesson">
+            <span class="num">3</span>
+            <div class="body"><a class="t" href="lessons/2-the-cause/03-clinging.html">Clinging: the 4 kinds</a><div class="one">What the mind grabs onto and how</div></div>
+            <div class="meta"><span class="time">7 min</span><input type="checkbox" class="check" data-lesson="3" aria-label="Mark lesson 3 done"></div>
+          </li>
+          <li class="lesson">
+            <span class="num">4</span>
+            <div class="body"><a class="t" href="lessons/2-the-cause/04-five-aggregates.html">The Five Aggregates</a><div class="one">Five activities that make up &quot;you,&quot; none of them a self</div></div>
+            <div class="meta"><span class="time">10 min</span><input type="checkbox" class="check" data-lesson="4" aria-label="Mark lesson 4 done"></div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div class="track-h"><span class="tn" style="color:var(--t3)">Track 3</span><h3>How It Works</h3></div>
+        <p class="track-d">Putting the pieces together.</p>
+        <ul class="lessons">
+          <li class="lesson">
+            <span class="num">5</span>
+            <div class="body"><a class="t" href="lessons/3-how-it-works/05-dependent-origination.html">Dependent Origination</a><div class="one">The step-by-step chain that turns a moment into stress, and where to break it</div></div>
+            <div class="meta"><span class="time">12 min</span><input type="checkbox" class="check" data-lesson="5" aria-label="Mark lesson 5 done"></div>
+          </li>
+          <li class="lesson">
+            <span class="num">6</span>
+            <div class="body"><a class="t" href="lessons/3-how-it-works/06-three-characteristics.html">The Three Characteristics</a><div class="one">Three ways of looking that help you let go</div></div>
+            <div class="meta"><span class="time">10 min</span><input type="checkbox" class="check" data-lesson="6" aria-label="Mark lesson 6 done"></div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div class="track-h"><span class="tn" style="color:var(--t4)">Track 4</span><h3>Big Questions</h3></div>
+        <p class="track-d">Easier once the rest is familiar.</p>
+        <ul class="lessons">
+          <li class="lesson">
+            <span class="num">7</span>
+            <div class="body"><a class="t" href="lessons/4-big-questions/07-rebirth.html">What does &quot;reincarnation&quot; actually mean?</a><div class="one">Rebirth as something the mind does, not a soul travelling</div></div>
+            <div class="meta"><span class="time">10 min</span><input type="checkbox" class="check" data-lesson="7" aria-label="Mark lesson 7 done"></div>
+          </li>
+        </ul>
+      </div></div>
+  </div>
+</section>
+
+<section class="band" id="glossary">
+  <div class="wrap">
+    <h2 class="sec-h">Glossary.</h2>
+    <p class="sec-sub">Quick lookups for the Pali words you’ll meet along the way.</p>
+    <input id="gl-q" class="gl-search" type="search" aria-label="Search the glossary" placeholder="Search terms, like dukkha or craving" autocomplete="off">
+    <div class="gl" id="gl">
+      <div class="term"><div class="p">dukkha</div><div class="e">stress / suffering</div><div class="m">The weight of clinging</div></div>
+      <div class="term"><div class="p">taṇhā</div><div class="e">craving</div><div class="m">Thirst: sensuality, becoming, non-becoming</div></div>
+      <div class="term"><div class="p">upādāna</div><div class="e">clinging</div><div class="m">Grasping; also "fuel"</div></div>
+      <div class="term"><div class="p">anicca</div><div class="e">inconstant</div><div class="m">Changing, unreliable</div></div>
+      <div class="term"><div class="p">anattā</div><div class="e">not-self</div><div class="m">Not worth identifying with as "me"</div></div>
+      <div class="term"><div class="p">nirodha</div><div class="e">cessation</div><div class="m">The ending of stress</div></div>
+      <div class="term"><div class="p">magga</div><div class="e">path</div><div class="m">The eightfold path</div></div>
+      <div class="term"><div class="p">khandha</div><div class="e">aggregate</div><div class="m">The five heaps: form, feeling, perception, fabrications, consciousness</div></div>
+      <div class="term"><div class="p">paṭicca samuppāda</div><div class="e">dependent origination / co-arising</div><div class="m">The chain of steps by which stress is produced, each depending on the last</div></div>
+      <div class="term"><div class="p">phassa</div><div class="e">contact</div><div class="m">A sense meeting its object</div></div>
+      <div class="term"><div class="p">avijjā</div><div class="e">ignorance</div><div class="m">Not seeing the four noble truths</div></div>
+      <div class="term"><div class="p">bhava</div><div class="e">becoming</div><div class="m">Taking on an identity in a world of experience</div></div>
+      <div class="term"><div class="p">kamma</div><div class="e">intentional action</div><div class="m">Choices and their results</div></div>
+      <div class="term"><div class="p">sutta</div><div class="e">discourse</div><div class="m">A teaching from the early texts</div></div>
+      <div class="term"><div class="p">Dhamma</div><div class="e">teaching / truth</div><div class="m">The Buddha's teachings and the way things are</div></div>
+      <div class="term"><div class="p">Sangha</div><div class="e">community</div><div class="m">Monastics and noble disciples</div></div></div>
+    <p class="gl-empty" id="gl-empty" hidden>No term matches that search.</p>
+  </div>
+</section>
 
 </main>
-<footer>Original text © its contributors, <a href="./LICENSE.html">CC BY-SA 4.0</a>. A study aid, not an authority: check the sources.</footer>
-<script>try{document.querySelectorAll("main li input[type=checkbox]").forEach(function(b){var m=b.parentElement.textContent.match(/Lesson (\d)/);if(!m)return;var k="lesson-"+m[1];b.disabled=false;b.checked=localStorage.getItem(k)==="1";b.addEventListener("change",function(){localStorage.setItem(k,b.checked?"1":"0")})})}catch(e){}</script>
+<footer><div class="wrap">
+<p>A study aid written by a learner, not an authority. Each lesson links to the original suttas and to Ṭhānissaro Bhikkhu’s free books, so check the sources. This is not therapy or medical advice. If you’re struggling, please talk to a professional.</p>
+<p>Original text © its contributors, <a href="./LICENSE.html">CC BY-SA 4.0</a>. Quoted sutta and book material belongs to its authors and translators; see <a href="./SOURCES.html">Sources</a>.</p>
+</div></footer>
+<script>(function(){var L=["./lessons/1-the-problem/01-four-noble-truths.html","./lessons/2-the-cause/02-craving.html","./lessons/2-the-cause/03-clinging.html","./lessons/2-the-cause/04-five-aggregates.html","./lessons/3-how-it-works/05-dependent-origination.html","./lessons/3-how-it-works/06-three-characteristics.html","./lessons/4-big-questions/07-rebirth.html"],N=L.length;
+function get(n){try{return localStorage.getItem("lesson-"+n)==="1"}catch(e){return false}}
+function set(n,on){try{localStorage.setItem("lesson-"+n,on?"1":"0")}catch(e){}}
+function sync(){var c=0,next=0;for(var i=1;i<=N;i++){if(get(i))c++;else if(!next)next=i}
+document.querySelectorAll("input[data-lesson]").forEach(function(b){b.checked=get(b.dataset.lesson)});
+document.getElementById("prog").textContent=c+" of "+N+" done";
+var d=document.getElementById("done-label");if(d)d.textContent=get(d.dataset.lesson)?"Done":"Mark as done";
+var a=document.getElementById("cta");if(a&&c){a.textContent=next?"Continue with Lesson "+next:"Read again from Lesson 1";a.href=L[(next||1)-1]}}
+document.addEventListener("change",function(e){var n=e.target.dataset&&e.target.dataset.lesson;if(n){set(n,e.target.checked);sync()}});
+var q=document.getElementById("gl-q");if(q)q.addEventListener("input",function(){var v=q.value.trim().toLowerCase(),shown=0;
+document.querySelectorAll("#gl .term").forEach(function(t){var on=!v||t.textContent.toLowerCase().indexOf(v)!==-1;t.hidden=!on;if(on)shown++});
+document.getElementById("gl").hidden=!shown;document.getElementById("gl-empty").hidden=!!shown});
+sync()})();</script>
 </body>
 </html>
